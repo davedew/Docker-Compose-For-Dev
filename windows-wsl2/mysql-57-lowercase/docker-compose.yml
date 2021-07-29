@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mysql_57_lowercase:
+    container_name: mysql_57_lowercase
+    image: mysql:5.7
+    volumes:
+      - ~/docker-data/mysql-5-lowercase:/var/lib/mysql
+    restart: always
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=base
+    - MYSQL_USER=base
+    - MYSQL_PASSWORD=base
+    ports:
+    - "3307:3306"
+    command: mysqld --lower_case_table_names=1

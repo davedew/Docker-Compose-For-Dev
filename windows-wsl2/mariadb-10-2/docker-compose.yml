@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mariadb_10_2:
+    container_name: mariadb_10_2
+    image: mariadb:10.2-bionic
+    volumes:
+      - ~/docker-data/maria-10-2:/var/lib/mysql
+    restart: always
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=base
+    - MYSQL_USER=base
+    - MYSQL_PASSWORD=base
+    ports:
+    - "3304:3306"
