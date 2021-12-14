@@ -2,9 +2,9 @@ version: '3'
 services:
   mariadb_10_3:
     container_name: mariadb_10_3
-    image: mariadb:10.3-bionic
+    image: amd64/mariadb:10.3-bionic
     volumes:
-    - /home/david/Docker-Compose-For-Dev/mariadb-10-3/data:/var/lib/mysql
+    - /Users/daviddew/Documents/Repositories/Docker-Compose-For-Dev/mariadb-10-3/data:/var/lib/mysql
     restart: always
     environment:
     - MYSQL_ROOT_PASSWORD=root

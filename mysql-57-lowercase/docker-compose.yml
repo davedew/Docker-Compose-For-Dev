@@ -2,9 +2,9 @@ version: '3'
 services:
   mysql_57_lowercase:
     container_name: mysql_57_lowercase
-    image: mysql:5.7
+    image: amd64/mysql:5.7
     volumes:
-    - /home/david/Docker-Compose-For-Dev/mysql-57-lowercase/data:/var/lib/mysql
+    - /Users/daviddew/Documents/Repositories/Docker-Compose-For-Dev/mysql-57-lowercase/data:/var/lib/mysql
     restart: always
     environment:
     - MYSQL_ROOT_PASSWORD=root
